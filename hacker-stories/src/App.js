@@ -1,32 +1,9 @@
 
-const list = [
-  {
-    title: 'React',
-    url: 'https://react.dev/',
-    author: 'Jordan Walke',
-    num_comments: 3,
-    points: 4,
-    objectID: 0,
-  },
-  {
-    title: 'Redux',
-    url: 'https://redux.js.org/',
-    author: 'Dan Abramov, Andrew Clark',
-    num_comments: 2,
-    points: 5,
-    objectID: 1,
-  },
-];
+const numbers = [1, 4, 9, 16];
 
-function showList() {
-  let totList='';
-  for (let i=0; i<2; i++)
-    if (totList == '')
-      totList = list[i].title;  
-    else
-      totList = totList + ', ' + list[i].title;  
-  return totList;
-}
+const newNums = numbers.map( function(n) {
+  return n*2;
+})
 
 function App() {
  
@@ -39,7 +16,8 @@ function App() {
       <label htmlFor="search">Search</label>
       <input id="search" type="text" />
       
-      <h2> {showList()} </h2>
+      <h2> {numbers} </h2>
+      <h2> {newNums} </h2>
     </div>
   );
 }
