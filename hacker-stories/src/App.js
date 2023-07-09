@@ -18,8 +18,8 @@ const list = [
   },
 ];
 
-function List()
-{
+//function List()
+const List = () => {
   return list.map
   (
     function(item) 
