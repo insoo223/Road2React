@@ -31,7 +31,11 @@ function App() {
       <hr/>
      
       <h2> {list.map(function(item) {
-              return <div>{item.title}</div>
+              return (
+                <div key= {item.objectID}>
+                  {item.title}
+                </div>
+                )
               })
            } 
       </h2>
