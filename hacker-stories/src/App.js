@@ -18,6 +18,16 @@ const list = [
   },
 ];
 
+function showList() {
+  let totList='';
+  for (let i=0; i<2; i++)
+    if (totList == '')
+      totList = list[i].title;  
+    else
+      totList = totList + ', ' + list[i].title;  
+  return totList;
+}
+
 function App() {
  
   return (
@@ -29,8 +39,7 @@ function App() {
       <label htmlFor="search">Search</label>
       <input id="search" type="text" />
       
-      <h2> {list[0].title} {list[0].url} </h2>
-      <h2> {list[1].title} {list[1].url} </h2>
+      <h2> {showList()} </h2>
     </div>
   );
 }
