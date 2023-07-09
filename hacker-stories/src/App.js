@@ -22,7 +22,8 @@ const list = [
 const List = () => {
   return list.map
   (
-    function(item) 
+    //function(item) 
+    item =>
     {
       return (
         <div key= {item.objectID}>
