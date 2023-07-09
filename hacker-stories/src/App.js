@@ -39,7 +39,8 @@ const List = () => {
   ) //list.map
 } //function List()
 
-function App() 
+//function App() 
+const App = () =>
 {
  
   return (
