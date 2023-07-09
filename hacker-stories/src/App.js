@@ -1,7 +1,6 @@
 
-const welcome = {
-  greeting: 'Hey',
-  title: 'React',
+function getTitle(title) {
+  return title;
 }
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
   return (
     <div>
       <h1> 
-        {welcome.greeting} {welcome.title}
+        Hello {getTitle('React')}
       </h1>
 
       <label htmlFor="search">Search</label>
