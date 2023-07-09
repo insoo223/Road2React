@@ -18,7 +18,8 @@ const list = [
   },
 ];
 
-function App() {
+function App() 
+{
  
   return (
     <div>
@@ -30,18 +31,26 @@ function App() {
       <input id="search" type="text" />
       <hr/>
      
-      <h2> {list.map(function(item) {
-              return (
-                <div key= {item.objectID}>
-                  {item.title}
-                </div>
-                )
-              })
-           } 
-      </h2>
-      
+      {
+        list.map
+        (
+          function(item) 
+          {
+            return (
+              <div key= {item.objectID}>
+                <span> 
+                  <a href={item.url}> {item.title}</a>
+                </span>
+                <span>{item.author}</span>
+                <span>{item.num_comments}</span>
+                <span>{item.points}</span>
+              </div>
+            ); //return should have beginning parenthesis at the same line of code
+          } //fuction(item)
+        ) //list.map
+      } 
     </div>
-  );
-}
+  ); //return
+} // function App()
 
 export default App;
