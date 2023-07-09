@@ -1,10 +1,6 @@
 
 const numbers = [1, 4, 9, 16];
 
-const newNums = numbers.map( function(n) {
-  return n*2;
-})
-
 function App() {
  
   return (
@@ -15,9 +11,13 @@ function App() {
 
       <label htmlFor="search">Search</label>
       <input id="search" type="text" />
+      <hr/>
+      <h2> {number} </h2>
+      <h2> {numbers.map(function(n) {
+              return <div>{n*2}</div>;
+              })
+           } </h2>
       
-      <h2> {numbers} </h2>
-      <h2> {newNums} </h2>
     </div>
   );
 }
