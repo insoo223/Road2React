@@ -62,11 +62,12 @@ const App = () =>
     setSearchTerm(event.target.value);
   };
 
-  const searchedStories = stories.filter(function(story){
-    return story.title
+  //const searchedStories = stories.filter(function(story){
+  const searchedStories = stories.filter( story => 
+    story.title
       .toLowerCase()
-      .includes(searchTerm.toLowerCase());
-  }); 
+      .includes(searchTerm.toLowerCase())
+  ); 
   
   return (
     <div>
