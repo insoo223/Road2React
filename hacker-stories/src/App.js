@@ -21,12 +21,13 @@ const List = (props) => {
   ) //list.map
 } //function List()
 
-const Search = () => 
+const Search = (props) => 
 {
   const [searchTerm, setSearchTerm] = React.useState('');
   
   const handleChange = event => {
     setSearchTerm (event.target.value);
+    props.onSearch(event);
   }
 
   return (
@@ -62,7 +63,13 @@ const App = () =>
       points: 5,
       objectID: 1,
     },
-  ];
+  ]; //const stories
+
+  //callback function
+  const handleSearch = event =>
+  {
+    console.log(event.target.value);
+  }
   
   return (
     <div>
@@ -70,10 +77,10 @@ const App = () =>
         My Hacker Stories
       </h1>
 
-      <Search />
+      <Search onSearch={handleSearch} />
  
       <hr/>
-      
+
       <List list={stories}/> 
     </div>
   ); //return
