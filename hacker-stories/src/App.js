@@ -1,5 +1,5 @@
 
-const list = [
+const stories = [
   {
     title: 'React',
     url: 'https://react.dev/',
@@ -19,8 +19,8 @@ const list = [
 ];
 
 //function List()
-const List = () => {
-  return list.map
+const List = (props) => {
+  return props.list.map
   (
     //function(item) 
     item =>
@@ -55,7 +55,7 @@ const App = () =>
       <label htmlFor="search">Search</label>
       <input id="search" type="text" onChange={handleChange}/>
       <hr/>
-      <List/> 
+      <List list={stories}/> 
     </div>
   ); //return
 } // function App()
